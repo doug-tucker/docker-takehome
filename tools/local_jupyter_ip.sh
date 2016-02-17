@@ -5,5 +5,5 @@
 
 ip_addr=$(docker-machine ls | grep default | awk '{print $5}' | sed 's/tcp:\/\///' | sed 's/:.*//')
 docker_port=$(docker ps | grep jupyter | sed 's/.*://' | sed 's/\-.*//')
-echo IP Address of local Jupyter instance is $ip_addr:$docker_port
+echo $ip_addr:$docker_port
 
